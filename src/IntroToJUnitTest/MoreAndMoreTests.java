@@ -10,25 +10,32 @@ import org.junit.Test;
 
 public class MoreAndMoreTests {
 
-//	@Test
-//	  public void MultTest() {
+	@Test
+	  public void MultTest() {
+
+	    assertEquals("10 x 0 = 0", multiply(10, 0));
+	    assertEquals("10 x 10 = 100", multiply(10, 10));
+	    assertEquals("8 x 11 = 88", multiply(8, 11));
+	  }
+
+	private Object multiply(int i, int j) {
+	 int p=i*j;
+	 String e=i+" x "+j+" = "+p;
+		return e;
+	}
+	
 //
-//	    assertEquals("10 x 0 = 0", multiply(10, 0));
-//	    assertEquals("10 x 10 = 100", multiply(10, 10));
-//	    assertEquals("8 x 11 = 88", multiply(8, 11));
-//	  }
-//
-//	@Test
-//	  public void PrimeTest() {
-//
-//	    assertTrue(isPrime(3));
-//	    assertTrue(isPrime(5));
-//	    assertTrue(isPrime(541));
-//	    assertFalse(isPrime(4));
-//	    assertFalse(isPrime(12));
-//	    assertFalse(isPrime(527));
-//
-//	  }
+	@Test
+	  public void PrimeTest() {
+
+	    assertTrue(isPrime(3));
+	    assertTrue(isPrime(5));
+	    assertTrue(isPrime(541));
+	    assertFalse(isPrime(4));
+	    assertFalse(isPrime(12));
+	    assertFalse(isPrime(527));
+
+	  }
 //
 //	@Test
 //	  public void SquareTest() {
@@ -56,6 +63,22 @@ public class MoreAndMoreTests {
 //	    assertFalse(isCube(143));
 //
 //	  }
+
+	private boolean isPrime(int i) {
+		for(int e=2;e<i;e++) {
+			for(int p=2;p<i;p++) {
+		if(i%e==p || i%e==p) {
+			return false;
+		}else {
+			return true;
+		}
+		}
+		}
+		
+		return false;
+		
+		
+	}
 
 
 
