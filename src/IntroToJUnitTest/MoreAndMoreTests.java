@@ -37,49 +37,48 @@ public class MoreAndMoreTests {
 
 	  }
 //
-//	@Test
-//	  public void SquareTest() {
+	@Test
+	  public void SquareTest() {
+
+	    assertTrue(isSquare(4));
+	    assertTrue(isSquare(144));
+	    assertTrue(isSquare(64));
+	    assertTrue(isSquare(10201));
+	    assertTrue(isSquare(1));
+	    assertFalse(isSquare(3));
+	    assertFalse(isSquare(22));
+	    assertFalse(isSquare(143));
+
+	  }
+private boolean isSquare(int i) {
+	return Math.sqrt(i)%1==0;
+}
+
+
 //
-//	    assertTrue(isSquare(4));
-//	    assertTrue(isSquare(144));
-//	    assertTrue(isSquare(64));
-//	    assertTrue(isSquare(10201));
-//	    assertTrue(isSquare(1));
-//	    assertFalse(isSquare(3));
-//	    assertFalse(isSquare(22));
-//	    assertFalse(isSquare(143));
-//
-//	  }
-//
-//	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	@Test
+	  public void CubeTest() {
+
+	    assertTrue(isCube(27));
+	    assertTrue(isCube(216));
+	    assertTrue(isCube(729));
+	    assertTrue(isCube(1));
+	    assertFalse(isCube(3));
+	    assertFalse(isCube(22));
+	    assertFalse(isCube(143));
+
+	  }
+
+	private boolean isCube(int i) {
+		return Math.cbrt(i)%1==0;
+}
 
 	private boolean isPrime(int i) {
-		for(int e=2;e<i;e++) {
-			for(int p=2;p<i;p++) {
-		if(i%e==p || i%e==p) {
-			return false;
-		}else {
+		for (int j = 2; j < i; j++) {	
+			if(i%j==0) {
+				return false;
+		}
+		}
 			return true;
-		}
-		}
-		}
-		
-		return false;
-		
-		
 	}
-
-
-
 }
